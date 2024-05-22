@@ -33,3 +33,12 @@ prevbutton.addEventListener("click", () => {plusSlides(-1)})
 
 let nextbutton = document.getElementById("next-button") // Get the element by the Id used in html
 nextbutton.addEventListener("click", () => {plusSlides(1)})
+
+/* Hent ut alle dotene */
+let items = document.querySelectorAll('.dot')
+
+/* For hver dot legger du til en funksjon som skjer når doten blir trykket på */
+for (let i = 0; i < items.length; i++) {
+    console.log(i+1)
+    items[i].addEventListener("click", () => {currentSlide(1)})
+}
