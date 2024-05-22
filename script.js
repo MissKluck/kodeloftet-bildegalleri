@@ -26,3 +26,10 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+/* Wire things up */
+let prevbutton = document.getElementById("prev-button") // Get the element by the Id used in html
+prevbutton.addEventListener("click", () => {plusSlides(-1)})
+
+let nextbutton = document.getElementById("next-button") // Get the element by the Id used in html
+nextbutton.addEventListener("click", () => {plusSlides(1)})
