@@ -10,10 +10,11 @@ function changeImage(offset) {
 }
 
 function setImage(imageNumber) {
-  // Find a list/collection of all the images
+  // Find a list/collection of all the images from the html
   const images = document.getElementsByClassName('image');
   const imageList = Array.from(images);
 
+  // How to change images
   for (let index = 0; index < imageList.length; index++) {
     const image = imageList[index];
 
@@ -52,6 +53,14 @@ function getIndexOfCurrentImage() {
       currentImage = index;
       break;
     }
+
+    if (isCurrent < totalImages) {
+      index = 0;
+    }
+
+    if (isCurrent > totalImages) {
+      index = 4;
+    }
   }
 
   return currentImage;
@@ -84,3 +93,11 @@ nextButton.addEventListener('click', () => {
 lastButton.addEventListener('click', () => {
   setImage(totalImages - 1);
 });
+
+if (Image < totalImages) {
+  Image = imageList.length;
+}
+
+if (Image > totalImages) {
+  Image = 0;
+}
