@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="carousel.js"></script>
     <title>Document</title>
 </head>
 <body>
     <main class="carousel">
         <div class="controls">
             <div class="back-n-forth">
-                <button>Previous</button>
-                <button>Next</button>
+                <div>
+                    <button id="first-button">First</button>
+                    <button id="previous-button">Previous</button>
+                </div>
+                <div>
+                    <button id="next-button">Next</button>
+                    <button id="last-button">Last</button>
+                </div>
             </div>
         </div>
         <div class="gallery">
