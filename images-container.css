@@ -1,0 +1,14 @@
+#frame {
+    overflow-y: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+#image-container {
+    display: flex;
+    gap: 1em;
+
+}
+
+img {
+    scroll-snap-align: center;
+}
