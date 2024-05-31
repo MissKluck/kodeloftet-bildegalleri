@@ -126,7 +126,7 @@ img {
   background-color: #717171;
 }
 
-/* Fading animation */
+/* Fading animation 
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -135,4 +135,28 @@ img {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}*/
+
+/* Design */
+
+header {
+  background-color: peachpuff;
+  padding: 0.2rem;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  padding: 10px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: peachpuff;
+  padding: 0.2rem;
+  border-radius: 9px;
 }
