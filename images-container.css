@@ -11,4 +11,5 @@
 
 img {
     scroll-snap-align: center;
+    display: block;
 }

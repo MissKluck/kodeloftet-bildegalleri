@@ -1,3 +1,17 @@
+const dotElements = document.getElementsByClassName("dot")
+let i = 1
+for (const dot of dotElements) {
+  const currentImage = i
+  console.log(dot)
+  console.log(i)
+  dot.addEventListener("click", () => {
+      // Legg til funksjon som skal kjøre
+      currentSlide(currentImage)
+    })
+  // Øke i med 1
+  i++
+}
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -25,10 +39,10 @@ function showSlides(n) {
     slides[currentImage].style.display = 'none';
   }
   for (currentImage = 0; currentImage < dots.length; currentImage++) {
-    dots[currentImage].className = dots[currentImage].className.replace(' active', '');
+    dots[currentImage].classList.remove('active');
   }
   slides[slideIndex - 1].style.display = 'block';
-  dots[slideIndex - 1].className += 'active';
+  dots[slideIndex - 1].classList.add('active');
 }
 
 /* Wire things up */
@@ -46,9 +60,9 @@ nextbutton.addEventListener('click', () => {
 let items = document.querySelectorAll('dot');
 
 /* For hver dot legger du til en funksjon som skjer når doten blir trykket på */
-for (let i = 0; i < items.length; i++) {
-  let currentSlide = console.log(i + 1);
-  items[i].addEventListener('click', () => {
+for (let currentDot = 0; currentDot < items.length; currentDot++) {
+  let currentSlide = console.log(currentDot + 1);
+  items[currentDot].addEventListener('click', () => {
     currentSlide(1);
   });
 }
